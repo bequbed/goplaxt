@@ -1,0 +1,15 @@
+
+services:
+  plaxt:
+    build:
+      context: .
+    container_name: plaxt
+    environment:
+      TRAKT_ID: ${TRAKT_ID}
+      TRAKT_SECRET: ${TRAKT_SECRET}
+      ALLOWED_HOSTNAMES: goplaxt.yourdomain.org
+    volumes:
+      - ./keystore:/app/keystore
+    ports:
+      - "8500:8000"
+    restart: unless-stopped
