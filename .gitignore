@@ -4,3 +4,4 @@ keystore/
 *.log
 .vscode/
 .idea/
+docker-compose.yml
